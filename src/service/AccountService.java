@@ -15,14 +15,6 @@ public class AccountService {
                 throw new WrongPasswordException();
             }
 
-            if (!login.matches("^[a-zA-Z0-9_]{1,20}$")) {
-                throw new WrongLoginException();
-            }
-            if (!(password.matches("^[a-zA-Z0-9_]{1,20}$") && (confirmPassword.matches("^[a-zA-Z0-9_]{1,20}$")) &&
-                    (password.equals(confirmPassword)))) {
-                throw new WrongPasswordException();
-
-            }
 
         }
 
